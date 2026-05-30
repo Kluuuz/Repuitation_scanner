@@ -38,7 +38,7 @@ ThreatLens is a Python-based threat intelligence tool that analyzes the reputati
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/threatlens.git
+git clone https://github.com/Kluuuz/ThreatLens.git
 cd threatlens
 ```
 
@@ -65,7 +65,7 @@ For better security, use environment variables instead of hardcoding your API ke
 Run the scanner:
 
 ```bash
-python threatlens.py
+python scanner.py
 ```
 
 Menu:
