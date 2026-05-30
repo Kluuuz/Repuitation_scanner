@@ -12,7 +12,7 @@ def url_rep(url): # URL Rep scanner
     keywords = ["login", "verify", "update", "secure", "account", "bank"]
     shorteners = ["bit.ly", "tinyurl", "t.co", "is.gd"]
 
-    if "https://" not in url:
+    if not url.startswith("https://"):
         score += 20
 
     for clues in keywords:
@@ -89,4 +89,6 @@ match features:
         print("Harmless  :", stats["harmless"])
         print("Undetected:", stats["undetected"])
     
+    case 2: 
+        print("\n Still underdevelopment")
 
