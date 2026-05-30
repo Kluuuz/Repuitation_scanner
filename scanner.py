@@ -1,9 +1,11 @@
 import requests
 import time
+import cred
 
-API = "API-KEY" # Enter your API Key here
+#  API = "API_KEY"
 
-def url_rep(url):
+
+def url_rep(url): # URL Rep scanner
 
     score = 0
     url = url.lower()
@@ -16,11 +18,14 @@ def url_rep(url):
     for clues in keywords:
         if clues in url:
             score+=10
+
     for short in shorteners:
         if short in url:
             score +=15
+
     if len(url) > 75:
         score += 10
+
     if any(char.isdigit() for char in url.split("//")[-1].split("/")[0]):
         score += 25
 
@@ -38,7 +43,7 @@ match features:
         api_url = "https://www.virustotal.com/api/v3/urls"
 
         headers={
-            "x-apikey": API
+            "x-apikey": cred.API  #Change cred.API to API var
         }
 
         data = {
